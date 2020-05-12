@@ -4,9 +4,11 @@ import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 
+import { GetStaticProps } from 'next';
+
 import utilStyles from '../styles/utils.module.css';
 
-export async function getStaticProps() {
+export async function getStaticProps(): GetStaticProps {
   const allPostsData = getSortedPostsData();
   return {
     props: {
